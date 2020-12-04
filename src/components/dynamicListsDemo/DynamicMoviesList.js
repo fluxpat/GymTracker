@@ -65,14 +65,12 @@ class DynamicMoviesList extends Component {
             <div>
                 <AddExercise addExercise={this.addExerciseHandler} />
 
-                {
-                    this.filteredMovies.map((oneMovie, index) => {
+                {this.filteredMovies.map((oneMovie, index) => {
                         return <ImprovedCard key={index} {...oneMovie} 
                         clickToDelete={() => this.deleteMovieHandler(index)} 
                         clickToAdd={() => this.addMovieHandler()}
                         />
-                    })
-                }       
+                })}       
 
                 {/* {this.state.movies.map((el, index) => 
                     <ImprovedCard {...el} key={index} 
